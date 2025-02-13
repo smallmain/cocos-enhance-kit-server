@@ -4,12 +4,13 @@
   "devDependencies": {
     "@xenon.js/configs": "^1.1.1",
     "prettier": "^3.5.0",
-    "unbuild": "^3.3.1",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "unbuild": "^3.3.1"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
-      "esbuild"
+      "esbuild",
+      "sharp"
     ]
   }
 }

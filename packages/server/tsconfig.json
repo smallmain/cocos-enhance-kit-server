@@ -2,6 +2,17 @@
   "extends": "@xenon.js/configs/ts/general.json",
   "compilerOptions": {
     "baseUrl": "app/",
+    "paths": {
+      "@components/*": [
+        "components/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ]
+    },
     "lib": [
       "dom",
       "dom.iterable",
