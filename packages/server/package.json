@@ -1,0 +1,39 @@
+{
+  "name": "@cocos-enhance-kit/server",
+  "version": "1.0.0",
+  "description": "Cocos Enhance Kit Server's backend.",
+  "license": "MIT",
+  "homepage": "https://smallmain.github.io/cocos-enhance-kit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smallmain/cocos-enhance-kit-server"
+  },
+  "bugs": {
+    "url": "https://github.com/smallmain/cocos-enhance-kit-server/issues"
+  },
+  "author": {
+    "name": "SmallMain",
+    "email": "smallmain@outlook.com",
+    "url": "https://www.smallmain.com/"
+  },
+  "funding": "https://smallmain.com/",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^15.1.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "unstorage": "^1.14.4"
+  },
+  "devDependencies": {
+    "@types/node": "22.13.2",
+    "@types/react": "19.0.8"
+  }
+}

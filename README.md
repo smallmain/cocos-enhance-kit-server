@@ -6,9 +6,13 @@
 
 ## 主要特性
 
-本项目是 [Cocos Enhance Kit](https://github.com/smallmain/cocos-enhance-kit) 的支持性服务端，旨在为某些特性提供快速应用的便利。**请注意，该服务端并非必需，Cocos Enhance Kit 并不依赖于此**。它主要作为一种实践参考，帮助开发者更高效地利用 Cocos Enhance Kit 的功能。
+本项目是 [Cocos Enhance Kit](https://github.com/smallmain/cocos-enhance-kit) 的支持性后端，旨在为某些特性提供快速应用的便利。
 
-目前，该服务端主要用于支持 [文本渲染烘焙](https://smallmain.github.io/cocos-enhance-kit/docs/user-guide/text-render/text-baking) 功能。通过该项目，您可以快速部署一个字符收集后端，从而优化文本渲染流程。
+**请注意，Cocos Enhance Kit 并不依赖此后端**。
+
+它主要作为一种实践参考，帮助开发者更高效地利用 Cocos Enhance Kit 的特性。
+
+目前主要用于[文本渲染烘焙](https://smallmain.github.io/cocos-enhance-kit/docs/user-guide/text-render/text-baking)，本项目可以让您可以快速部署一个字符收集后端。
 
 ## 架构介绍
 

@@ -1,0 +1,52 @@
+
+# IDE - Jet Brains
+/.idea
+
+# IDE - VSCode
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+!.vscode/*.code-workspace
+
+# IDE - Visual Studio
+.vs/
+
+# Gradle Files
+.gradle/
+
+# Npm Files
+node_modules
+npm-debug.log
+
+# System Files
+.DS_Store
+ehthumbs.db
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+
+# DotEnv
+.env
+
+# compiled output
+dist
+tmp
+temp
+out-tsc
+
+# TS Node Compiled Output
+.ts-node
+
+# Exclude Cocos Creator Files
+*.meta
+
+# Next.js
+.next/
+out/
+build/
+next-env.d.ts
+.vercel
