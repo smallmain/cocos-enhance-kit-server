@@ -17,6 +17,11 @@
       "esnext"
     ],
     "noEmit": true,
+
+    // https://github.com/microsoft/TypeScript/issues/47663#issuecomment-1519138189
+    "declaration": false,
+    "declarationMap": false,
+    
     "esModuleInterop": true,
     "jsx": "preserve",
     "plugins": [
@@ -28,6 +33,7 @@
   },
   "include": [
     "app",
+    "middleware.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": [

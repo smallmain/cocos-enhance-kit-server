@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider";
+import { SITE_NAME } from "@/constants";
+import "@/globals.css";
 import type { Metadata } from "next";
-import "./globals.css";
 
 export default function RootLayout({
     children,
@@ -24,5 +25,5 @@ export default function RootLayout({
 }
 
 export const metadata: Metadata = {
-    title: "Cocos Enhance Kit Server",
+    title: SITE_NAME,
 };
