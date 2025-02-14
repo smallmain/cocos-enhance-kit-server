@@ -1,16 +1,14 @@
 {
   "extends": "@xenon.js/configs/ts/general.json",
   "compilerOptions": {
-    "baseUrl": "app/",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "paths": {
-      "@components/*": [
-        "components/*"
+      "@/*": [
+        "./app/*"
       ],
-      "@styles/*": [
-        "styles/*"
-      ],
-      "@utils/*": [
-        "utils/*"
+      "@/public/*": [
+        "./public/*"
       ]
     },
     "lib": [

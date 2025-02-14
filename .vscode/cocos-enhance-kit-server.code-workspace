@@ -14,6 +14,19 @@
         }
     ],
     "settings": {
-        "typescript.tsdk": "root/node_modules/typescript/lib"
+        "typescript.tsdk": "root/node_modules/typescript/lib",
+        "files.associations": {
+            "*.css": "tailwindcss"
+        },
+        "[javascript][typescript][javascriptreact][typescriptreact]": {
+            "editor.formatOnSave": true,
+            "editor.codeActionsOnSave": {
+                "source.fixAll": "explicit",
+                "source.organizeImports": "explicit",
+            },
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.formatOnPaste": true,
+            "editor.formatOnType": true,
+        },
     },
 }
