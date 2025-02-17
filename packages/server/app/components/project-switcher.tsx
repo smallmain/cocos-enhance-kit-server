@@ -1,7 +1,7 @@
 "use client";
 
+import { useProject } from "@/contexts/project";
 import { ChevronsUpDown, Plus } from "lucide-react";
-import * as React from "react";
 
 import {
     DropdownMenu,
@@ -17,17 +17,18 @@ import {
     SidebarMenuItem,
     useSidebar,
 } from "@/components/ui/sidebar";
+import { XIcon, type Icon } from "./icon";
 
 export function ProjectSwitcher({
     projects,
 }: {
     projects: {
         name: string;
-        logo: React.ElementType;
+        logo: Icon;
     }[];
 }) {
     const { isMobile } = useSidebar();
-    const [activeProject, setActiveProject] = React.useState(projects[0]);
+    const { activeProject, setActiveProject } = useProject();
 
     return (
         <SidebarMenu>
@@ -39,7 +40,10 @@ export function ProjectSwitcher({
                             className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
                         >
                             <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                                <activeProject.logo className="size-5" />
+                                <XIcon
+                                    icon={activeProject.logo}
+                                    className="size-5"
+                                />
                             </div>
                             <div className="ml-1 grid flex-1 text-left text-sm leading-tight">
                                 <span className="truncate font-semibold">
@@ -68,7 +72,10 @@ export function ProjectSwitcher({
                                 className="gap-2 p-3"
                             >
                                 <div className="flex size-6 items-center justify-center rounded-sm bg-primary text-primary-foreground">
-                                    <project.logo className="size-4 shrink-0" />
+                                    <XIcon
+                                        icon={activeProject.logo}
+                                        className="size-4 shrink-0"
+                                    />
                                 </div>
                                 {project.name}
                             </DropdownMenuItem>

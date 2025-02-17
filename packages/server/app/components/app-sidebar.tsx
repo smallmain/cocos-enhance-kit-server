@@ -8,36 +8,26 @@ import {
     SidebarHeader,
     SidebarRail,
 } from "@/components/ui/sidebar";
-import { Package, Type } from "lucide-react";
 import * as React from "react";
+import type { Icon } from "./icon";
 
-// This is sample data.
-const data = {
-    projects: [
-        {
-            name: "哈局大话骰",
-            logo: Package,
-        },
-        {
-            name: "Acme Corp.",
-            logo: Package,
-        },
-        {
-            name: "Evil Corp.",
-            logo: Package,
-        },
-    ],
-    features: [
-        {
-            name: "文本烘焙",
-            url: "#",
-            icon: Type,
-            isActive: true,
-        },
-    ],
-};
-
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+export function AppSidebar({
+    data,
+    ...props
+}: React.ComponentProps<typeof Sidebar> & {
+    data: {
+        projects: {
+            name: string;
+            logo: Icon;
+        }[];
+        features: {
+            name: string;
+            url: string;
+            icon: Icon;
+            isActive: boolean;
+        }[];
+    };
+}) {
     return (
         <Sidebar collapsible="icon" {...props}>
             <SidebarHeader>

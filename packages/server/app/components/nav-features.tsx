@@ -1,7 +1,5 @@
 "use client";
 
-import { type LucideIcon } from "lucide-react";
-
 import {
     SidebarGroup,
     SidebarGroupLabel,
@@ -10,6 +8,7 @@ import {
     SidebarMenuItem,
     useSidebar,
 } from "@/components/ui/sidebar";
+import { XIcon, type Icon } from "./icon";
 
 export function NavFeatures({
     features,
@@ -17,7 +16,7 @@ export function NavFeatures({
     features: {
         name: string;
         url: string;
-        icon: LucideIcon;
+        icon: Icon;
         isActive: boolean;
     }[];
 }) {
@@ -33,7 +32,7 @@ export function NavFeatures({
                             tooltip={item.name}
                             isActive={item.isActive}
                         >
-                            {item.icon && <item.icon />}
+                            {item.icon && <XIcon icon={item.icon} />}
                             <span>{item.name}</span>
                         </SidebarMenuButton>
                         {/* <SidebarMenuButton asChild>
