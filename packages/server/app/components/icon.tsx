@@ -1,5 +1,3 @@
-"use client";
-
 import { Package, Type } from "lucide-react";
 
 export enum Icon {
@@ -12,9 +10,9 @@ export function XIcon({
     ...props
 }: { icon: Icon } & React.ComponentProps<typeof Package>) {
     return (
-        <div>
+        <>
             {icon === Icon.Package && <Package {...props} />}
             {icon === Icon.Type && <Type {...props} />}
-        </div>
+        </>
     );
 }
