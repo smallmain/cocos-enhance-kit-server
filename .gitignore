@@ -50,3 +50,6 @@ out/
 build/
 next-env.d.ts
 .vercel
+
+# Server
+packages/server/db/
