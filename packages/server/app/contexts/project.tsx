@@ -1,31 +1,41 @@
 "use client";
 
-import { Icon } from "@/components/icon";
+import type { Project } from "@/db";
 import { createContext, useContext, useState } from "react";
 
-export interface Project {
-    name: string;
-    logo: Icon;
-}
-
 interface ProjectContextType {
-    activeProject: Project;
-    setActiveProject: (project: Project) => void;
+    projects: Project[];
+    activeProjectId: string;
+    activeProject: Project | null;
+    setActiveProjectId: (project: string) => void;
+    setProjects: (projects: Project[]) => void;
 }
 
 const ProjectContext = createContext<ProjectContextType | null>(null);
 
 export function ProjectProvider({
     children,
-    initialProject,
+    initialProjects,
+    initialProjectId,
 }: {
     children: React.ReactNode;
-    initialProject: Project;
+    initialProjects: Project[];
+    initialProjectId: string;
 }) {
-    const [activeProject, setActiveProject] = useState(initialProject);
+    const [projects, setProjects] = useState(initialProjects);
+    const [activeProjectId, setActiveProjectId] = useState(initialProjectId);
+    const activeProject = projects.find(p => p.id === activeProjectId) || null;
 
     return (
-        <ProjectContext.Provider value={{ activeProject, setActiveProject }}>
+        <ProjectContext.Provider
+            value={{
+                projects,
+                activeProject,
+                activeProjectId,
+                setActiveProjectId,
+                setProjects,
+            }}
+        >
             {children}
         </ProjectContext.Provider>
     );

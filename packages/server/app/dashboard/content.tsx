@@ -14,7 +14,7 @@ import { useFeature } from "@/contexts/feature";
 import { useProject } from "@/contexts/project";
 
 export default function DashboardContent() {
-    const { activeProject } = useProject();
+    const { activeProject, projects } = useProject();
     const { currentFeature } = useFeature();
 
     return (
@@ -31,7 +31,7 @@ export default function DashboardContent() {
                             <BreadcrumbList>
                                 <BreadcrumbItem className="hidden md:block">
                                     <BreadcrumbPage>
-                                        {activeProject.name}
+                                        {activeProject?.name}
                                     </BreadcrumbPage>
                                 </BreadcrumbItem>
                                 <BreadcrumbSeparator className="hidden md:block" />

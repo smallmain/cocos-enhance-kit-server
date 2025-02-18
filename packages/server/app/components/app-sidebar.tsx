@@ -8,6 +8,7 @@ import {
     SidebarHeader,
     SidebarRail,
 } from "@/components/ui/sidebar";
+import type { Project } from "@/db";
 import * as React from "react";
 import type { Icon } from "./icon";
 
@@ -16,10 +17,7 @@ export function AppSidebar({
     ...props
 }: React.ComponentProps<typeof Sidebar> & {
     data: {
-        projects: {
-            name: string;
-            logo: Icon;
-        }[];
+        projects: Project[];
         features: {
             name: string;
             url: string;
@@ -31,7 +29,7 @@ export function AppSidebar({
     return (
         <Sidebar collapsible="icon" {...props}>
             <SidebarHeader>
-                <ProjectSwitcher projects={data.projects} />
+                <ProjectSwitcher />
             </SidebarHeader>
             <SidebarContent>
                 <NavFeatures features={data.features} />
